@@ -1,12 +1,13 @@
-n = int(input())
 bool_fra = False
-for i in range(n):
+count = 0
+fr = ''
+while fr != 'СТОП':
     fr = str(input())
     fra = fr.lower()
+    count += 1
     if 'кот' in fra:
         bool_fra = True
-    if bool_fra:
-        print('МЯУ')
+        print(count)
         break
 if not bool_fra:
-    print('НЕТ')
+    print('-1')
