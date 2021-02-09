@@ -1,7 +1,5 @@
 n = int(input())
-m = int(input())
-symb = str(input())
-print(symb * m)
-for i in range(n - 2):
-    print(symb, ' ' * (m - 2), symb, sep='')
-print(symb * m)
+for i in range(1, n + 1):
+    for j in range(i, 0, -1):
+        print('Осталось секунд:', (j - 1))
+    print('Пуск', i)
