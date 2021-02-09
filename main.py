@@ -1,17 +1,15 @@
-bool_fra = False
-count = 0
-count2 = 0
-fr = ''
-while fr != 'СТОП':
-    fr = str(input())
-    fra = fr.lower()
-    if not bool_fra:
-        count += 1
-    if 'кот' in fra:
-        bool_fra = True
-        count2 += 1
-        continue
-if bool_fra:
-    print(count2, count)
-elif not bool_fra:
-    print('0 -1')
+n = int(input())
+m = int(input())
+x = False
+while m != 0:
+    if not x:
+        if n < m:
+            a = m
+            x = True
+    if x:
+        if n > m:
+            b = m
+            break
+    n = m
+    m = int(input())
+print(a, b, b - a)
