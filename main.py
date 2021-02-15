@@ -1,13 +1,13 @@
+m = int(input())
 n = int(input())
-arr = set()
-b = False
-for i in range(n + 1):
-    sity_name = str(input())
-    if sity_name in arr:
-        b = True
-        print('TRY ANOTHER')
-        break
+arr_name = set()
+for i in range(m + n):
+    name = str(input())
+    if name not in arr_name:
+        arr_name.add(name)
     else:
-        arr.add(sity_name)
-if not b:
-    print('OK')
+        arr_name.remove(name)
+if len(arr_name) != 0:
+    print(len(arr_name))
+else:
+    print('NO')
