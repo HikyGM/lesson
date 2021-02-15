@@ -1,22 +1,13 @@
-people = set()
-pause = set()
-n = int(input())
-m = int(input())
-k = int(input())
-count = 0
-for i in range(n + m + k):
-    name = input()
-    if name in people:
-        count += 1
-        pause.add(name)
-    people.add(name)
-if (n == k == m) and len(people) == n:
-    print('NO')
-else:
-    if len(pause) + count > 0:
-        if (len(pause) + count) % 2 != 0:
-            print((len(pause) + count) % 2)
-        else:
-            print((len(pause) + count) // 2)
-    else:
-        print('NO')
+men = int(input())
+men_works = []
+for _ in range(men):
+    men_works.append(input())
+result = 0
+for example in set(men_works):
+    cout = 0
+    for name in men_works:
+        if example == name:
+            cout += 1
+    if cout > 1:
+        result += cout
+print(result)
