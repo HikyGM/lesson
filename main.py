@@ -1,6 +1,10 @@
-number_of_cells = int(input())
-letter = ' ABCDEFGHI'
-for i in range(number_of_cells, 0, -1):
-    for j in range(1, number_of_cells + 1):
-        print(letter[j] + str(i), end=' ')
-    print('\n')
+text = str(input())
+count = max_count = 0
+for i in range(len(text)):
+    if text[i] == 'о':
+        count += 1
+        if count > max_count:
+            max_count = count
+    elif text[i] == 'р':
+        count = 0
+print(max_count)
