@@ -1,15 +1,13 @@
 count_number = int(input())
+list = []
 list_number = []
-log = False
 for i in range(count_number):
-    list_number.append(int(input()))
-number = int(input())
-for i in range(len(list_number) - 1):
-    for j in range(i + 1, len(list_number)):
-        if list_number[i] * list_number[j] == number:
-            log = True
-            break
-if log:
-    print('ДА')
-else:
-    print('НЕТ')
+    name = str(input())
+    list.append(name)
+    if name[-1] == '4' or name[-1] == '5':
+        list_number.append(name)
+for i in range(count_number):
+    print(list[i])
+print('')
+for i in range(len(list_number)):
+    print(list_number[i])
