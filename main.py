@@ -1,8 +1,27 @@
-subsid = int(input())
-count_skot = int(input())
-for i in range(1, min(count_skot, subsid // 20) + 1):
-    for j in range(0, min(count_skot, subsid // 10) + 1):
-        for k in range(0, min(count_skot, subsid // 5) + 1):
-            if i * 20 + j * 10 + k * 5 == subsid:
-                if i + j + k == count_skot:
-                    print(i, j, k)
+count_drob = int(input())
+a = 0
+b = 0
+for i in range(count_drob):
+    n = int(input())
+    m = int(input())
+    if count_drob == 1:
+        a = n
+        b = m
+    elif a == 0 and b == 0:
+        a = n
+        b = m
+        continue
+    a = (a * m) + (n * b)
+    b = (m * b)
+    ch = a
+    zn = b
+    q = a
+    while zn % ch != 0:
+        r = zn % ch
+        zn, q, ch = ch, zn // ch, r
+    b = b // ch
+    if count_drob == 1:
+        a = 1
+        continue
+    a = a // ch
+print(a, '/', b, sep='')
