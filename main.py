@@ -1,11 +1,10 @@
-n = int(input())
-m = int(input())
-e = int(input())
-for i in range(n, e, m):
-    print(i, end=' ')
-    if i == e - m:
-        print(e)
-
+# n = int(input())
+# m = int(input())
+# e = int(input())
+# for i in range(n, e, m):
+#     print(i, end=' ')
+#     if i == e - m:
+#         print(e)
 
 # strok = str(input())
 # if (len(strok) <= 7) and (strok < 'флейта') and ('нота' not in strok) and ('до' or 'ля' in strok):
@@ -73,3 +72,20 @@ for i in range(n, e, m):
 #             print('Доброта Страх')
 #         elif count_dobr < count_strah:
 #             print('Страх Доброта')
+
+# subsid = int(input())
+# count_skot = int(input())
+# for i in range(1, min(count_skot, subsid // 20) + 1):
+#     for j in range(0, min(count_skot, subsid // 10) + 1):
+#         for k in range(0, min(count_skot, subsid // 5) + 1):
+#             if i * 20 + j * 10 + k * 5 == subsid:
+#                 if i + j + k == count_skot:
+#                     print(i, j, k)
+
+text = str(input())
+symbol = int(input())
+text_complete = ' ' + text
+if 0 < symbol < len(text_complete):
+    print(text_complete[symbol])
+else:
+    print('ОШИБКА')
