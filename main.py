@@ -1,13 +1,20 @@
-number_of_string = int(input())
-white_list = []
-allowed_request = []
-for i in range(number_of_string):
+result = str(input())
+number_of_positions = int(result[:3])
+the_amount = int(result[4:])
+error_list = []
+summa = 0
+for i in range(number_of_positions):
     string = str(input())
-    white_list.append(string)
-number_of_search = int(input())
-for i in range(number_of_search):
-    string = str(input())
-    if string in white_list:
-        allowed_request.append(string)
-for i in range(len(allowed_request)):
-    print(allowed_request[i])
+    price_product = int(string[:6])
+    count_products = int(string[8:11])
+    result_price_products = int(string[13:])
+    summa = summa + (price_product * count_products)
+    if price_product * count_products != result_price_products:
+        error_list.append(i)
+n = the_amount - summa
+if abs(n) == 0:
+    print(n)
+else:
+    print(n)
+    for i in range(len(error_list)):
+        print(error_list[i] + 1, end=' ')
