@@ -1,10 +1,8 @@
-text = str(input())
-count = max_count = 0
-for i in range(len(text)):
-    if text[i] == 'о':
-        count += 1
-        if count > max_count:
-            max_count = count
-    elif text[i] == 'р':
-        count = 0
-print(max_count)
+count_string = int(input())
+for i in range(count_string):
+    string = str(input())
+    if string[:2] == '%%':
+        string = string[2:]
+    elif string[:4] == '####':
+        continue
+    print(string)
