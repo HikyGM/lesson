@@ -1,8 +1,7 @@
-count_string = int(input())
-for i in range(count_string):
-    string = str(input())
-    if string[:2] == '%%':
-        string = string[2:]
-    elif string[:4] == '####':
-        continue
-    print(string)
+number_of_products = int(input())
+list_of_products = []
+for i in range(number_of_products):
+    name_products = str(input())
+    list_of_products.append(name_products)
+for i in range(number_of_products):
+    print(list_of_products[i])
