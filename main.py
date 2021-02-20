@@ -1,27 +1,20 @@
-count_drob = int(input())
-a = 0
-b = 0
-for i in range(count_drob):
-    n = int(input())
-    m = int(input())
-    if count_drob == 1:
-        a = n
-        b = m
-    elif a == 0 and b == 0:
-        a = n
-        b = m
-        continue
-    a = (a * m) + (n * b)
-    b = (m * b)
-    ch = a
-    zn = b
-    q = a
-    while zn % ch != 0:
-        r = zn % ch
-        zn, q, ch = ch, zn // ch, r
-    b = b // ch
-    if count_drob == 1:
-        a = 1
-        continue
-    a = a // ch
-print(a, '/', b, sep='')
+count = int(input())
+text = str(input())
+for i in range(len(text)):
+
+    if 1040 <= ord(text[i]) <= 1071:
+        if (ord(text[i]) + count) > 1071:
+            a = ord(text[i]) + count - 1072 + 1040
+            print(chr(a), end='')
+        else:
+            a = ord(text[i]) + count
+            print(chr(a), end='')
+    if 1072 <= ord(text[i]) <= 1103:
+        if (ord(text[i]) + count) > 1103:
+            a = ord(text[i]) + count - 1104 + 1072
+            print(chr(a), end='')
+        else:
+            a = ord(text[i]) + count
+            print(chr(a), end='')
+    if not 1040 <= ord(text[i]) <= 1103:
+        print(text[i], end='')
