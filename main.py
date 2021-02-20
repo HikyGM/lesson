@@ -1,10 +1,7 @@
 number_of_string = int(input())
-list_of_strings = []
-search_string = []
+list_number = []
 for i in range(number_of_string):
-    string = str(input())
-    list_of_strings.append(string)
-search_bar = str(input())
-for i in range(number_of_string):
-    if search_bar in list_of_strings[i]:
-        print(list_of_strings[i])
+    number = int(input())
+    list_number.append(number)
+for i in range(number_of_string - 1):
+    print(list_number[i] + list_number[i + 1])
