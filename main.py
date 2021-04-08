@@ -9,3 +9,8 @@ for i in range(n):
     qwe = []
 for row in table:
     print(*row, sep="\t")
+print()
+for i in range(len(table[i])):
+    for j in range(len(table)):
+        print(table[j][i], sep='\t', end='\t')
+    print()
