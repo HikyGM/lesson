@@ -10,7 +10,10 @@ for i in range(n):
             break
         else:
             continue
-    spisok[slovo[:count]] = slovo[count + 1:]
+    if slovo[count + 1:] in spisok:
+        spisok[slovo[count + 1:]] = spisok[slovo[count + 1:]] + ' ' + slovo[:count]
+    else:
+        spisok[slovo[count + 1:]] = slovo[:count]
     count = 0
 m = int(input())
 for i in range(m):
